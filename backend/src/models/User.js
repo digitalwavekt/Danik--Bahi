@@ -10,6 +10,6 @@ const userSchema = new mongoose.Schema({
 }, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }, toJSON: { virtuals: true }, toObject: { virtuals: true } });
 
 userSchema.virtual('id').get(function () { return this._id.toString(); });
-userSchema.index({ email: 1 }, { unique: true });
+{ unique: true };
 
 export default mongoose.model('User', userSchema);

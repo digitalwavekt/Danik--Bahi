@@ -10,7 +10,6 @@ import routes from './routes/index.js';
 import { connectDB } from './config/db.js';
 
 dotenv.config();
-console.log('JWT loaded:', !!process.env.JWT_SECRET);
 
 const app = express();
 const PORT = process.env.PORT || 4000;
