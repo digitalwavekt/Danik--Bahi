@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Dainik Bahi",
+    "slug": "dainik-bahi",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0b2318"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0b2318"
+      },
+      "package": "com.digitalwave.dainikbahi",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        { "photosPermission": "Allow Dainik Bahi to access your photos to upload bills." }
+      ]
+    ],
+    "scheme": "dainikbahi",
+    "extra": {
+      "eas": { "projectId": "YOUR_EAS_PROJECT_ID" }
+    }
+  }
+}
