@@ -9,7 +9,7 @@ import path from 'path';
 import routes from './routes/index.js';
 import { connectDB } from './config/db.js';
 import { syncSuperAdmin } from './scripts/syncSuperAdmin.js';
-
+import auditRoutes from './routes/audit.routes.js';
 dotenv.config();
 
 const app = express();
@@ -38,6 +38,7 @@ app.use(
 app.use(compression());
 app.use(express.json({ limit: '2mb' }));
 app.use(express.urlencoded({ extended: true }));
+app.use('/api/audit-logs', auditRoutes);
 
 // Optional old local uploads route. S3 uploads do not need this.
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
